@@ -1,6 +1,6 @@
 import { CharStatus } from '../../lib/statuses'
 import classnames from 'classnames'
-import { REVEAL_TIME_MS } from '../../constants/settings'
+import { rNum, REVEAL_TIME_MS } from '../../constants/settings'
 import { getStoredIsHighContrastMode } from '../../lib/localStorage'
 
 type Props = {
@@ -43,11 +43,36 @@ export const Cell = ({
       'cell-reveal': shouldReveal,
     }
   )
+  function updateSourceFile() {
+    if (value == undefined) {
+      return ''
+    } else {
+      return value.toLowerCase().concat(rNum)
+    }
+  }
+
+  const imgStyles = {
+    height: 'auto',
+    width: 'auto',
+    'max-height': '50px',
+    'max-width': '96%',
+    'margin-left': 'auto',
+    'margin-right': 'auto',
+  }
+  const cellStyles = {
+    animationDelay,
+    'max-height': '100%',
+    'max-width': '100%',
+  }
 
   return (
-    <div className={classes} style={{ animationDelay }}>
-      <div className="letter-container" style={{ animationDelay }}>
-        {value}
+    <div className={classes} style={cellStyles}>
+      <div className="letter-container flex" style={cellStyles}>
+        <img
+          src={`/letters/${updateSourceFile()}.png`}
+          style={imgStyles}
+          alt={value || ''}
+        />
       </div>
     </div>
   )

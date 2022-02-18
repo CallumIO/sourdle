@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 import classnames from 'classnames'
 import { CharStatus } from '../../lib/statuses'
-import { MAX_WORD_LENGTH, REVEAL_TIME_MS } from '../../constants/settings'
+import { MAX_WORD_LENGTH, REVEAL_TIME_MS, rNum } from '../../constants/settings'
 import { getStoredIsHighContrastMode } from '../../lib/localStorage'
 
 type Props = {
@@ -48,6 +48,13 @@ export const Key = ({
     height: '58px',
   }
 
+  const imgStyles = {
+    width: 'auto',
+    height: 'auto',
+    'max-width': '95%',
+    'max-height': '105%',
+  }
+
   const handleClick: React.MouseEventHandler<HTMLButtonElement> = (event) => {
     onClick(value)
     event.currentTarget.blur()
@@ -55,7 +62,11 @@ export const Key = ({
 
   return (
     <button style={styles} className={classes} onClick={handleClick}>
-      {children || value}
+      <img
+        src={`/letters/${value.toLowerCase().concat(rNum)}.png`}
+        style={imgStyles}
+        alt={value}
+      />
     </button>
   )
 }

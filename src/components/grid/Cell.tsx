@@ -44,7 +44,7 @@ export const Cell = ({
     }
   )
   function updateSourceFile() {
-    if (value == undefined) {
+    if (value === undefined) {
       return ''
     } else {
       return value.toLowerCase().concat(rNum)
@@ -54,15 +54,15 @@ export const Cell = ({
   const imgStyles = {
     height: 'auto',
     width: 'auto',
-    'max-height': '50px',
-    'max-width': '96%',
-    'margin-left': 'auto',
-    'margin-right': 'auto',
+    maxHeight: '50px',
+    maxWidth: '96%',
+    marginLeft: 'auto',
+    marginRight: 'auto',
   }
   const cellStyles = {
     animationDelay,
-    'max-height': '100%',
-    'max-width': '100%',
+    maxHeight: '100%',
+    maxWidth: '100%',
   }
 
   return (

@@ -51,8 +51,8 @@ export const Key = ({
   const imgStyles = {
     width: 'auto',
     height: 'auto',
-    'max-width': '90%',
-    'max-height': '98%',
+    maxWidth: '90%',
+    maxHeight: '98%',
   }
 
   const handleClick: React.MouseEventHandler<HTMLButtonElement> = (event) => {

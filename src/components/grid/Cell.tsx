@@ -65,14 +65,21 @@ export const Cell = ({
     maxWidth: '100%',
   }
 
+  function imgLoader() {
+    let a = updateSourceFile()
+    if (a == '') {
+      return
+    } else {
+      return (
+        <img src={`/letters/${a}.png`} style={imgStyles} alt={value || ''} />
+      )
+    }
+  }
+
   return (
     <div className={classes} style={cellStyles}>
       <div className="letter-container flex" style={cellStyles}>
-        <img
-          src={`/letters/${updateSourceFile()}.png`}
-          style={imgStyles}
-          alt={value || ''}
-        />
+        {imgLoader()}
       </div>
     </div>
   )

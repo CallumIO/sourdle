@@ -61,12 +61,22 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         This is a version of Wordle, but only using the words from Olivia
         Rodrigo's 'SOUR' Album!
         <br />
+        Made with love by{' '}
+        <a
+          href="https://twitter.com/caitliniscrying"
+          target="_blank"
+          rel="noreferrer"
+          className="underline font-bold"
+        >
+          Caitlin
+        </a>
+        <br />
         <br />
         <a
           href="https://github.com/cwackerfuss/react-wordle"
           className="underline font-bold"
         >
-          Made possible by this open source code.
+          And possible by this open source code.
         </a>{' '}
       </p>
     </BaseModal>

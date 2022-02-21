@@ -22,6 +22,7 @@
   },
   "scripts": {
     "build": "react-scripts build",
+    "builddoc": "react-scripts build & rmdir docs /s /q & xcopy build docs /E /H /C /I /Q /Y",
     "eject": "react-scripts eject",
     "fix": "prettier --write src",
     "lint": "prettier --check src",

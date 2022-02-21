@@ -67,7 +67,7 @@ export const Cell = ({
 
   function imgLoader() {
     let a = updateSourceFile()
-    if (a == '') {
+    if (a === '') {
       return
     } else {
       return (

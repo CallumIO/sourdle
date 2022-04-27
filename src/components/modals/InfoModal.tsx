@@ -61,6 +61,15 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         This is a version of Wordle, but only using the words from Olivia
         Rodrigo's 'SOUR' Album!
         <br />
+        Made by{' '}
+        <a
+          href="https://github.com/callumio"
+          target="_blank"
+          rel="noreferrer"
+          className="underline font-bold"
+        >
+          Callum
+        </a>
         <br />
         <a
           href="https://github.com/cwackerfuss/react-wordle"
